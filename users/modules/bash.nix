@@ -23,21 +23,6 @@ in
         programs = {
           bash = {
             enable = true;
-            enableCompletion = true;
-            enableSyntaxHighlighting = true;
-
-            history = {
-              size = 10000000;
-              save = 10000000;
-              extended = true;
-            };
-
-            sessionVariables = {
-              EDITOR = "vim";
-              PAGER = "less";
-              CLICOLOR = "1";
-              GREP_COLOR = "1;33";
-            };
           };
         };
       };
