@@ -9,13 +9,5 @@
 
       luks.devices.cryptdata.device = "/dev/nvme0n1p2";
     };
-
-    loader.grub = {
-      enable = true;
-      version = 2;
-      efiSupport = true;
-      enableCryptodisk = true;
-      device = "nodev";
-    };
   };
 }
