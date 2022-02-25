@@ -24,7 +24,6 @@ in
           bash = {
             enable = true;
             enableCompletion = true;
-            enableAutosuggestions = true;
             enableSyntaxHighlighting = true;
 
             history = {
@@ -38,7 +37,6 @@ in
               PAGER = "less";
               CLICOLOR = "1";
               GREP_COLOR = "1;33";
-              IGNOREEOF = "1";
             };
           };
         };
