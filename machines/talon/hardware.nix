@@ -14,7 +14,7 @@
 
     video = {
       hidpi = {
-        enable = lib.mkDefault true
+        enable = lib.mkDefault true;
       };
     };
   };
