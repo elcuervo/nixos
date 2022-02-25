@@ -7,20 +7,10 @@ if [ "${EUID}" -ne 0 ]; then
     exit 1
 fi
 
-if [ -z "${1}" ]; then
-    echo "Please define a /dev"
-    exit 1
-fi
-
-if [ -z "${2}" ]; then
-    echo "Please define an encryption passphrase"
-    exit 1
-fi
-
-echo -n "/dev/:"
+echo -n "/dev/"
 read DEVICE
 
-echo -n "Passphrase:"
+echo -n "Passphrase: "
 read -s PASSPHRASE
 
 echo "----> Drop existing partitions"
