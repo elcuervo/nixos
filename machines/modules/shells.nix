@@ -21,7 +21,7 @@ in
   config = with lib;
     mkIf cfg.enable {
       programs = {
-        bash = {
+        zsh = {
           enable = true;
         };
       };

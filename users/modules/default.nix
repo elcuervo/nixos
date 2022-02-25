@@ -9,7 +9,7 @@
     ./neovim.nix
     ./readline.nix
     ./starship.nix
-    ./bash.nix
+    ./zsh.nix
   ];
 
   my = {
@@ -34,7 +34,7 @@
         enable = lib.mkDefault true;
       };
 
-      bash = {
+      zsh = {
         enable = lib.mkDefault true;
       };
     };

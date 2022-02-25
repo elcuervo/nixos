@@ -26,6 +26,7 @@ in
             enable = true;
 
             enableBashIntegration = true;
+            enableZshIntegration = true;
 
             settings = {
               RESET = "0";

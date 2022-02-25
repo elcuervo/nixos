@@ -20,12 +20,12 @@ in
   config = with lib;
     mkIf cfg.enable {
       users = {
-        defaultUserShell = pkgs.bash;
+        defaultUserShell = pkgs.zsh;
         mutableUsers = false;
 
         users = {
           root = {
-            shell = pkgs.bash;
+            shell = pkgs.zsh;
             hashedPassword =
               "$6$dvnOxi7G.W8G$cTJj8.BX2LhmQmMQcQt5dB7IdvaruDY5QooWPmnq5qmvRBoZd9msPIDh/476JJuMiaJnqBsebV8HdOwJeXhMK/";
             openssh = {
