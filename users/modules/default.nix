@@ -9,6 +9,7 @@
     ./neovim.nix
     ./readline.nix
     ./starship.nix
+    ./bash.nix
   ];
 
   my = {
