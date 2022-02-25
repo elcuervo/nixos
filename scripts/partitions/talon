@@ -1,0 +1,70 @@
+#! /usr/bin/env bash
+
+set -eo pipefail
+
+if [ "${EUID}" -ne 0 ]; then
+    echo "Please run as root"
+    exit 1
+fi
+
+if [ -z "${1}" ]; then
+    echo "Please define a /dev"
+    exit 1
+fi
+
+if [ -z "${2}" ]; then
+    echo "Please define an encryption passphrase"
+    exit 1
+fi
+
+echo -n "/dev/:"
+read DEVICE
+
+echo -n "Passphrase:"
+read -s PASSPHRASE
+
+echo "----> Drop existing partitions"
+sgdisk --zap-all /dev/${DEVICE}
+sgdisk -og /dev/${DEVICE}
+
+echo "-----> Create boot partition"
+sgdisk -n 0:0:+1G -t 0:ef00 -c 0:boot /dev/${DEVICE}
+
+echo "-----> Create root partition"
+sgdisk -n 0:0:0 -t 0:8300 -c 0:data /dev/${DEVICE}
+
+echo "-----> Create encrypted root partition"
+echo -n "${PASSPHRASE}" | cryptsetup luksFormat --key-file - /dev/disk/by-partlabel/data
+echo -n "${PASSPHRASE}" | cryptsetup luksOpen --key-file - /dev/disk/by-partlabel/data cryptdata
+
+echo "-----> Create data pv"
+pvcreate /dev/mapper/cryptdata
+
+echo "-----> Create data vg"
+vgcreate vg /dev/mapper/cryptdata
+
+echo "-----> Create swap volume"
+lvcreate --size 24G --name swap vg
+
+echo "-----> Create root volume"
+lvcreate -l '100%FREE' --name root vg
+
+echo "-----> Enable swap partition"
+mkswap -L swap /dev/vg/swap
+swapon /dev/vg/swap
+
+echo "-----> Create root filesystem"
+mkfs.ext4 -L root /dev/vg/root
+
+echo "-----> Mount root filesystem"
+mount -t ext4 /dev/vg/root /mnt
+
+echo "-----> Create boot filesystem"
+mkfs.vfat -n boot /dev/disk/by-partlabel/boot
+
+echo "-----> Wait for boot"
+sleep 3
+
+echo "-----> Mount boot filesystem"
+mkdir /mnt/boot
+mount /dev/disk/by-label/boot /mnt/boot
