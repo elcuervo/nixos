@@ -31,9 +31,9 @@
             experimental-features = nix-command flakes
           '';
 
-          binaryCaches = [ "https://cache.nixos.org" ];
+          settings.substituters = [ "https://cache.nixos.org" ];
 
-          binaryCachePublicKeys = [
+          settings.trusted-public-keys = [
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
           ];
 
