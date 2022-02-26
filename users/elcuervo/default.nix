@@ -40,7 +40,32 @@ in
     programs = {
       home-manager.enable = true;
 
-      gh.enable = true;
+      ssh.enable = true;
+
+      bat.enable = true;
+
+      exa = {
+        enable = true;
+        enableAliases = true;
+      };
+
+      jq.enable = true;
+
+      firefox.enable = true;
+
+      gh = {
+        enable = true;
+	settings = {
+          editor = "nvim";
+          git_protocol = "ssh";
+        };
+      };
+
+      git = {
+        enable = true;
+	userName = "elcuervo";
+        userEmail = "elcuervo@elcuervo.net";
+      };
 
       alacritty = {
         enable = true;
