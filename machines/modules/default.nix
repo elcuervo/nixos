@@ -11,6 +11,7 @@
     ./shells.nix
     ./timesyncd.nix
     ./tools.nix
+    ./xserver.nix
     ./users.nix
   ];
 
@@ -41,6 +42,10 @@
       };
 
       tools = {
+        enable = lib.mkDefault true;
+      };
+
+      xserver = {
         enable = lib.mkDefault true;
       };
 
