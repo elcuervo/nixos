@@ -10,6 +10,8 @@
     ./networking.nix
   ];
 
+  virtualisation.docker.enable = true;
+
   system = {
     stateVersion = "21.11";
   };

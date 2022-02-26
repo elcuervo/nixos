@@ -7,8 +7,10 @@ in
 {
   imports = [
     ../modules
+
     ./packages.nix
     ./programs.nix
+    ./services.nix
   ];
 
   my = {
@@ -33,6 +35,7 @@ in
         };
         extraGroups = [
           "wheel"
+          "docker"
         ];
       };
     };
