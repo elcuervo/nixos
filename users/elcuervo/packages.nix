@@ -10,6 +10,7 @@
           input-fonts
           font-awesome
 
+          docker-compose
           lazygit
           ticker
           graphviz
