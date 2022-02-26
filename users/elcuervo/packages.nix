@@ -7,6 +7,11 @@
       home = {
         packages = with pkgs; [
           lazygit
+
+          # UI
+          zulip
+          slack
+          tdesktop
         ];
       };
      };
