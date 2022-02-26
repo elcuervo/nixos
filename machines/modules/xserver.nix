@@ -24,7 +24,7 @@ in
           enable = true;
 
           displayManager.gdm.enable = true;
-          desktopManager.gnome.nable = true;
+          desktopManager.gnome.enable = true;
         };
       };
     };
