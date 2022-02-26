@@ -30,6 +30,7 @@
           zulip
           slack
           tdesktop
+          spotify
         ];
       };
      };

@@ -42,7 +42,14 @@ in
   };
 
   home-manager.users."${username}" = { pkgs, config, ... }: {
-    programs = {
+    gtk = {
+      enable = true;
+
+      gtk4 = {
+        extraConfig = {
+          gtk-application-prefer-dark-theme = true;
+        };
+      };
     };
 
     home = {
