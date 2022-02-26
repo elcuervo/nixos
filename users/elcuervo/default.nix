@@ -36,9 +36,29 @@ in
     };
   };
 
-  home-manager.users."${username}" = { config, ... }: {
+  home-manager.users."${username}" = { pkgs, config, ... }: {
+    programs = {
+      home-manager.enable = true;
+
+      gh.enable = true;
+
+      alacritty = {
+        enable = true;
+
+	settings = {
+	  window = {
+	    startup_mode = "Fullscreen";
+	  };
+	};
+      };
+    };
+
     home = {
       homeDirectory = "/home/${username}";
+
+      packages = [
+        pkgs.lazygit
+      ];
 
       sessionPath = [
         "$HOME/.local/bin"
