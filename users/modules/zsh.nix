@@ -38,6 +38,9 @@ in
               ".." = "cd ..";
               "..." = "cd ../..";
 
+              g = "git";
+              gs = "git status";
+              vim = "nvim";
               rgrep = "grep -Rn";
               hgrep = "fc -El 0 | grep";
               history = "fc -l 1";
@@ -45,7 +48,7 @@ in
             };
 
             sessionVariables = {
-              EDITOR = "vim";
+              EDITOR = "nvim";
               PAGER = "less";
               CLICOLOR = "1";
               GREP_COLOR = "1;33";
