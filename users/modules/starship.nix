@@ -26,10 +26,13 @@ in
             enable = true;
 
             settings = {
-              add_newline = true;
-              battery = {
-                disabled = true;
+              add_newline = false;
+
+              character = {
+                success_symbol = "[➜](grey)";
+                error_symbol = "[➜](bold red)";
               };
+
               directory = {
                 truncation_length = 5;
                 truncate_to_repo = false;
