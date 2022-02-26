@@ -81,8 +81,8 @@ in
     home = {
       homeDirectory = "/home/${username}";
 
-      packages = [
-        pkgs.lazygit
+      packages = with pkgs; [
+        lazygit
       ];
 
       sessionPath = [
