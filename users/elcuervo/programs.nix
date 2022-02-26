@@ -119,6 +119,10 @@
          bash = {
            enable = true;
 
+           initExtra = ''
+             . $HOME/.tokens
+           '';
+
            shellAliases = {
              g = "${pkgs.git}/bin/git";
              gs = "${pkgs.git}/bin/git status";
