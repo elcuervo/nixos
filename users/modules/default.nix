@@ -5,7 +5,6 @@
     ./settings.nix
 
     ./dircolors.nix
-    ./lsd.nix
     ./neovim.nix
     ./readline.nix
     ./starship.nix
@@ -15,10 +14,6 @@
   my = {
     modules = {
       dircolors = {
-        enable = lib.mkDefault true;
-      };
-
-      lsd = {
         enable = lib.mkDefault true;
       };
 
