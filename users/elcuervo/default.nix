@@ -7,6 +7,7 @@ in
 {
   imports = [
     ../modules
+    ./programs.nix
   ];
 
   my = {
@@ -47,8 +48,6 @@ in
       direnv.enable = true;
 
       jq.enable = true;
-
-      firefox.enable = true;
 
       exa = {
         enable = true;
