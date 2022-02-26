@@ -1,5 +1,18 @@
 { pkgs, lib, config, options, ... }:
 
+let
+   spotify-hd = pkgs.symlinkJoin {
+    name = "spotify";
+    paths = [ pkgs.spotify ];
+    nativeBuildInputs = [ pkgs.makeWrapper ];
+    postBuild = ''
+      wrapProgram $out/bin/spotify \
+        --add-flags "--force-device-scale-factor=1.8"
+    '';
+  };
+in
+
+
 {
   config = with lib;
   {
@@ -30,7 +43,7 @@
           zulip
           slack
           tdesktop
-          spotify
+          spotify-hd
         ];
       };
      };
