@@ -55,6 +55,12 @@ in
     home = {
       homeDirectory = "/home/${username}";
 
+      keyboard = {
+        options = [
+          "caps:escape"
+        ];
+      };
+
       sessionPath = [
         "$HOME/.local/bin"
       ];
