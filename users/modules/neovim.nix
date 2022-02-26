@@ -2,9 +2,7 @@
 
 let
   cfg = config.my.modules.neovim;
-
 in
-
 {
   options = with lib; {
     my = {

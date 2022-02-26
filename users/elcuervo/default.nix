@@ -7,6 +7,10 @@ in
 {
   imports = [
     ../modules
+
+    ./packages.nix
+    ./programs.nix
+    ./services.nix
   ];
 
   my = {
@@ -19,8 +23,8 @@ in
     users = {
       "${username}" = {
         description = "${fullname}";
-        shell = pkgs.zsh;
         isNormalUser = true;
+	shell = pkgs.bash;
         hashedPassword = "$6$3jSyhppR3kO$n5O/iUU36U6MCHim83gbvf1rItoH5HDLTN/IDOZZnhs3ycE9f8piSgKHFleTLVtMnRK6kdXPZHAyQJTZhUTHk0";
         openssh = {
           authorizedKeys = {
@@ -31,12 +35,16 @@ in
         };
         extraGroups = [
           "wheel"
+          "docker"
         ];
       };
     };
   };
 
-  home-manager.users."${username}" = { config, ... }: {
+  home-manager.users."${username}" = { pkgs, config, ... }: {
+    programs = {
+    };
+
     home = {
       homeDirectory = "/home/${username}";
 

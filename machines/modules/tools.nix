@@ -29,6 +29,8 @@ in
           tmux
           tree
           vim
+          git
+          ag
           wget
           yq
         ];

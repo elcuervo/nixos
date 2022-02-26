@@ -48,6 +48,8 @@
         nixpkgs = {
           config = {
             allowUnfree = true;
+            allowUnsupportedSystem = true;
+            input-fonts.acceptLicense = true;
           };
 
           overlays = [

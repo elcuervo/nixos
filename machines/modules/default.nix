@@ -8,7 +8,6 @@
     ./haveged.nix
     ./network.nix
     ./openssh.nix
-    ./shells.nix
     ./timesyncd.nix
     ./tools.nix
     ./xserver.nix
@@ -30,10 +29,6 @@
       };
 
       openssh = {
-        enable = lib.mkDefault true;
-      };
-
-      shells = {
         enable = lib.mkDefault true;
       };
 

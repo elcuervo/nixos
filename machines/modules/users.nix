@@ -20,7 +20,7 @@ in
   config = with lib;
     mkIf cfg.enable {
       users = {
-        defaultUserShell = pkgs.zsh;
+        defaultUserShell = pkgs.bash;
         mutableUsers = false;
 
         users = {
