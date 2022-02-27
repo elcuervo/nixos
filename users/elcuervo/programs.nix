@@ -151,8 +151,15 @@
 
          git = {
            enable = true;
+
            userName = "elcuervo";
            userEmail = "elcuervo@elcuervo.net";
+
+           extraConfig = {
+             init = {
+               defaultBranch = "main";
+             };
+           };
          };
 
          alacritty = {
