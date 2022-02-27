@@ -56,6 +56,12 @@ in
     home = {
       homeDirectory = "/home/${username}";
 
+      sessionVariables = {
+        EDITOR = "nvim";
+        TERMINAL = "alacritty";
+        LIBGL_DRI3_DISABLE = true; # Magic env that fixes displaylink issues
+      };
+
       keyboard = {
         options = [
           "caps:escape"
