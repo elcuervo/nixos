@@ -33,6 +33,7 @@ in
           ag
           wget
           yq
+          wmctrl
         ];
       };
     };
