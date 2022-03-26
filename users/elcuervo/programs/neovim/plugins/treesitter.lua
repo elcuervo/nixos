@@ -1,6 +1,3 @@
--- Use homebrew gcc version
-require'nvim-treesitter.install'.compilers = { "/opt/homebrew/bin/gcc-11" }
-
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
