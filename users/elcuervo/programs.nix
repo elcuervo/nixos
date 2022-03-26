@@ -21,7 +21,6 @@
 
           exa = {
             enable = true;
-            enableAliases = true;
           };
 
           neovim = import ./programs/neovim.nix { inherit pkgs lib; };
