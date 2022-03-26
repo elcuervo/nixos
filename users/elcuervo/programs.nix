@@ -25,9 +25,7 @@
           };
 
           neovim = import ./programs/neovim.nix { inherit pkgs lib; };
-
           fish = import ./programs/fish.nix { inherit pkgs lib; };
-
           tmux = import ./programs/tmux.nix { inherit pkgs; };
 
           gh = {
