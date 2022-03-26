@@ -6,7 +6,6 @@
 
     ./neovim.nix
     ./readline.nix
-    ./starship.nix
   ];
 
   my = {
@@ -19,9 +18,6 @@
         enable = lib.mkDefault true;
       };
 
-      starship = {
-        enable = lib.mkDefault true;
-      };
     };
   };
 }

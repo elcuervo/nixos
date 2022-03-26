@@ -20,7 +20,7 @@ in
   config = with lib;
     mkIf cfg.enable {
       users = {
-        defaultUserShell = pkgs.bash;
+        defaultUserShell = pkgs.fish;
         mutableUsers = false;
 
         users = {

@@ -6,22 +6,13 @@
       home-manager.users."${config.my.username}" = { config, ... }: {
         programs = {
           firefox.enable = true;
-
           chromium.enable = true;
-
           home-manager.enable = true;
-
           ssh.enable = true;
-
           bat.enable = true;
-
           direnv.enable = true;
-
           jq.enable = true;
-
-          exa = {
-            enable = true;
-          };
+          exa.enable = true;
 
           neovim = import ./programs/neovim.nix { inherit pkgs lib; };
           fish = import ./programs/fish.nix { inherit pkgs lib; };
