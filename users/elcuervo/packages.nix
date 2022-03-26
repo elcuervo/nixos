@@ -35,7 +35,6 @@ in
             ticker
             gtop
             calcurse
-            kmonad
 
             # QoL
             nixpkgs-fmt
