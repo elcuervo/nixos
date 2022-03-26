@@ -36,6 +36,22 @@ in
           gtop
           calcurse
 
+          # QoL
+          nixpkgs-fmt
+          hyperfine
+
+          tree-sitter
+          nodejs # github copilot
+
+          # extra language servers
+          solargraph
+          rnix-lsp
+          terraform-lsp
+          terraform-ls
+          nodePackages.typescript
+          nodePackages.typescript-language-server
+          gopls
+
           # UI
           vlc
           bitwarden
