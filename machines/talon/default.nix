@@ -11,8 +11,7 @@
   ];
 
   virtualisation.docker.enable = true;
-
-  services.fprintd.enable = true;
+  virtualisation.virtualbox.host.enable = true;
 
   system = {
     stateVersion = "21.11";

@@ -38,6 +38,7 @@ in
           "docker"
           "networkmanager"
           "dialout"
+          "vboxusers"
         ];
       };
     };
