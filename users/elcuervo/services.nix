@@ -8,6 +8,9 @@
           "org/gnome/settings-daemon/plugins/media-keys" = {
             custom-keybindings = [
               "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+              "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+              "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+              "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
             ];
           };
 
@@ -15,6 +18,24 @@
             binding = "<Alt>2";
             command = "wmctrl -a Firefox";
             name = "focus-browser";
+          };
+
+          "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+            binding = "<Alt>3";
+            command = "wmctrl -a Slack";
+            name = "focus-slack";
+          };
+
+          "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+            binding = "<Alt>1";
+            command = "wmctrl -a Alacritty";
+            name = "focus-terminal";
+          };
+
+          "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+            binding = "<Alt>4";
+            command = "wmctrl -a Telegram";
+            name = "focus-telegram";
           };
         };
 

@@ -66,7 +66,7 @@ in
 
       keyboard = {
         options = [
-          "caps:escape"
+          "ctrl:nocaps"
         ];
       };
 
