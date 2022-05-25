@@ -60,7 +60,6 @@ in
             slack
             tdesktop
             spotify-hd
-            albert
           ];
         };
       };
