@@ -34,6 +34,8 @@ in
           wget
           yq
           wmctrl
+          wofi
+          gnome3.gnome-tweaks
         ];
       };
     };

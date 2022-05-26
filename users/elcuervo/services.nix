@@ -27,9 +27,9 @@
           };
 
           "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-            binding = "<Alt>1";
-            command = "wmctrl -a Alacritty";
-            name = "focus-terminal";
+            binding = "<Alt>d";
+            command = "wofi --show drun";
+            name = "launcher";
           };
 
           "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
