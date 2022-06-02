@@ -29,8 +29,28 @@ in
                 [ids]
                 *
                 [main]
+
                 # Maps capslock to escape when pressed and control when held.
-                capslock = overload(meta, esc)
+                capslock = overload(ctrl_vim, esc)
+
+                # ctrl_vim modifier layer; inherits from 'Ctrl' modifier layer
+
+                [ctrl_vim:C]
+
+                space = swap(vim_mode)
+
+                # vim_mode modifier layer; also inherits from 'Ctrl' modifier layer
+
+                [vim_mode:C]
+
+                h = left
+                j = down
+                k = up
+                l = right
+                # forward word
+                w = C-right
+                # backward word
+                b = C-left
               '';
             };
           };
