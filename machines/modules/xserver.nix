@@ -20,6 +20,22 @@ in
   config = with lib;
     mkIf cfg.enable {
       services = {
+        keyd = {
+          enable = true;
+
+          configuration = {
+            default = {
+              text = ''
+                [ids]
+                *
+                [main]
+                # Maps capslock to escape when pressed and control when held.
+                capslock = overload(meta, esc)
+              '';
+            };
+          };
+        };
+
         xserver = {
           enable = true;
 
