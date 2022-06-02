@@ -72,6 +72,7 @@
             sharedNixosConfiguration
             ./machines/talon
             ./users/elcuervo
+            ./modules/nixos/keyd.nix
           ];
 
           specialArgs = {

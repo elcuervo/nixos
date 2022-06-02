@@ -1,3 +1,5 @@
-self: super:
+final: prev:
 
-{ }
+{
+  keyd = prev.callPackage ./keyd.nix { };
+}
