@@ -25,7 +25,7 @@ in
 
           configuration = {
             default = {
-              text = lib.strings.fileContents ./users/elcuervo/programs/keyd/default.conf;
+              text = lib.strings.fileContents ../../users/elcuervo/programs/keyd/default.conf;
             };
           };
         };
