@@ -50,7 +50,6 @@
             allowUnfree = true;
             allowUnsupportedSystem = true;
             input-fonts.acceptLicense = true;
-            permitInsecurePackages = [ "electron-12.2.3" ];
           };
 
           overlays = [
