@@ -8,6 +8,7 @@
     ./haveged.nix
     ./network.nix
     ./openssh.nix
+    ./tailscale.nix
     ./timesyncd.nix
     ./tools.nix
     ./xserver.nix
@@ -29,6 +30,10 @@
       };
 
       openssh = {
+        enable = lib.mkDefault true;
+      };
+
+      tailscale = {
         enable = lib.mkDefault true;
       };
 
