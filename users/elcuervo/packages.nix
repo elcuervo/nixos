@@ -35,6 +35,7 @@ in
             ticker
             gtop
             calcurse
+            gnupg
 
             # QoL
             nixpkgs-fmt
