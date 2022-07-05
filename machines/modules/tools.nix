@@ -30,7 +30,7 @@ in
           tree
           vim
           git
-          ag
+          silver-searcher
           wget
           yq
           wmctrl

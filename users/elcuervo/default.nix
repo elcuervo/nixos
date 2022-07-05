@@ -70,6 +70,8 @@ in
         ];
       };
 
+      stateVersion = "22.05";
+
       sessionPath = [
         "$HOME/.local/bin"
       ];
