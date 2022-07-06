@@ -6,8 +6,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "RRethy";
       repo = "nvim-treesitter-endwise";
-      rev = "f653101e056cebcee71b47b8adb93d3a878cda36";
-      sha256 = "sha256-J1cKq/Ctw8Vj7RL3D9AnSezS+8Ugm+nfgXz7KjfKtVo=";
+      rev = "d618adae7e372df0e5413e8eaa1075b443cf594d";
+      sha256 = "sha256-WTmcr/Q0TKA9v2W81uReSJJkJLMVPIiKBBWy3qJHrTE=";
     };
   };
 in
