@@ -21,6 +21,7 @@ in
       home-manager.users."${config.my.username}" = { config, ... }: {
         programs = {
           neovim = {
+            package = pkgs.neovim-nightly;
             enable = true;
           };
         };
